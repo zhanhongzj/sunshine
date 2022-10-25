@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
+// import { createContext } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+
+import TodoList from './pages/todo-list';
+import List from './pages/list';
+import Users from './pages/users';
+
+import { store } from './redux/store';
+
 import './App.css';
+
+// @ts-ignore
+// export const StoreContext = createContext<Store>();
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <StoreContext.Provider value={store}> */}
+      <Provider store={store}>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/app' element={<App />} />
+            <Route path='/todo-list' element={<TodoList />} />
+            <Route path='/list' element={<List />} />
+            <Route path='/users' element={<Users />} />
+            <Route path='*' element={<>404</>} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+      {/* </StoreContext.Provider> */}
+    </>
   );
 }
 

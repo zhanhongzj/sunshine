@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input class="input" type="text" value="234" aaa="234" data-name="1">
+  <script>
+    const ele = document.querySelector('.input');
+    console.log(ele.className,ele.type,ele.value,ele.getAttribute('class'));
+    console.log(ele.aaa,ele.getAttribute('aaa'),ele.getAttribute('data-name'),ele.dataset.name);
+  </script>
+</body>
+</html>

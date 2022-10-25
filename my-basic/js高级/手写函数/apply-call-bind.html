@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 抽取公用函数
+    Function.prototype.bound =  function (thisArg,arg){
+      thisArg = thisArg == undefined?window:Object(thisArg);
+      const sKey = Symbol();
+      Object.defineProperty(thisArg,sKey,{
+        enumerable:false,
+        configurable:true,
+        writable:false,
+        value:this
+      });
+      thisArg[sKey](...arg);
+      delete thisArg[sKey];
+    }
+    // 手写apply函数
+    // apply函数特点
+    // 显示绑定函数的this到一个指定的对象上,第二个参数为数组-函数的实参,当传入为null或者undifined时候返回window,当绑定的不为对象时候,转换为其包装对象
+    Function.prototype.myApply = function(thisArg,arg=[]){
+      this.bound(thisArg,arg);
+    };
+
+    // 手写 call 函数,同apply相比,仅仅参数不同
+    Function.prototype.myCall = function (thisArg,...arg) {
+      this.bound(thisArg,arg);
+    };
+
+    // 手写bind函数
+    // bind函数特点,返回一个绑定确定对象this的函数, 参数可两次传递
+
+    Function.prototype.myBind = function(argThis,...arg1){
+      return (...arg2)=>{
+        const sKey = Symbol();
+        Object.defineProperty(argThis,sKey,{
+          configurable:true,
+          enumerable:false,
+          value:this,
+        });
+        argThis[sKey](...arg1,...arg2);
+        delete argThis[sKey];
+      };
+    }
+    let obj = {a:1,b:2};
+    function foo (...arg){
+      console.log(this,arg);
+    };
+    const foo1 = foo.bind(obj,1,2);
+    foo1(3,4);
+  </script>
+</body>
+</html>

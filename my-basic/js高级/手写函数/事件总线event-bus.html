@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="subscription">订阅</button>
+  <button class="subscription2">取消订阅</button>
+  <script>
+    class EventBus {
+      constructor(){
+        this.events = {};
+      };
+      on(name,fn){
+        if(!Reflect.has(this.events,name)){
+          this.events[name] = []
+        }
+        this.events[name].push(fn);
+      }
+      off(name,fn){
+        if(Reflect.has(this.events,name)){
+          this.events[name] = this.events[name].filter(v=>{
+            return v!==fn;
+          })
+          if(!this.events[name].length){
+          Reflect.deleteProperty(this.events,name);
+        }
+        console.log('取消订阅成功',this.events);
+        }
+      }
+      emit(name,...arg){
+        if(Reflect.has(this.events,name)){
+          this.events[name].forEach(fn=>{
+            fn(...arg);
+          })
+        }
+      }
+    }
+  </script>
+  <script>
+    const ele = document.querySelector('.subscription');
+    const ele2 = document.querySelector('.subscription2');
+    const eventBus = new EventBus();
+    const fn1 = (name)=>{console.log(1111,name)};
+    const fn2 = (name)=>{console.log(2222,name)};
+    eventBus.on('a',fn1);
+    eventBus.on('a',fn2);
+    ele.onclick = function(){
+      eventBus.emit('a','触发');
+    }
+    ele2.onclick = function(){
+      eventBus.off('a',fn1);
+    }
+  </script>
+</body>
+</html>

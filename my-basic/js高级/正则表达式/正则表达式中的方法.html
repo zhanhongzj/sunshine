@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1 RegExp 实例对象中的方法, 也就是存在于RegExp.prototype中的方法
+    // test, exec
+    // 2.字符串中的方法, 也就是String.prototype中的方法, 包装类型
+    // replace,replaceAll,match,split,search等
+
+    //replaceAll
+    // const str = 'fasd12 32fasdf 234gjaksd';
+    // console.log(str.replaceAll(/\d*/g,''))
+    // console.log(str.replace(/\d+/g,''))
+
+    const arr = ['a.html','b.css','c.jsx','d.html','f.js','h.css','m.js'];
+    const arr1 = arr.filter(v=>{
+      return /\.jsx?$/.test(v);
+    });
+    console.log(arr1);
+  </script>
+</body>
+</html>

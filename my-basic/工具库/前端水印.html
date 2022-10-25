@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      width:1000px;
+      height:1000px;
+    }
+  </style>
+</head>
+<body >
+  <script>
+    const uid = 'waterMark_ecommerce';
+const { body } = document;
+
+const canvasHeight = 150;
+const canvasWidth = 250;
+
+const WaterMark = {
+  setWatermark(title) {
+    const waterMarkBox = document.getElementById(uid);
+    if (waterMarkBox !== null) {
+      body.removeChild(waterMarkBox);
+    }
+
+    // 利用canvas绘制水印信息
+    const canvas = document.createElement('canvas');
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
+    const ctx = canvas.getContext('2d');
+    ctx.rotate(-(Math.PI / 6));
+    ctx.fillStyle = 'rgba(200, 200, 200, 0.30)';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.font = '24px bold';
+    ctx.fillText(title, 50, 85); // 填充水印
+
+    const bgImg = canvas.toDataURL('image/png');
+
+    // 创建div用于显示
+    const div = document.createElement('div');
+    div.style.pointerEvents = 'none';
+    div.style.top = '0';
+    div.style.left = '0';
+    div.style.position = 'fixed';
+    div.style.zIndex = '10000';
+    div.style.width = '100%';
+    div.style.height = '100%';
+    div.style.backgroundImage = `url(${bgImg})`;
+
+    const parentDiv = document.createElement('div');
+    parentDiv.id = uid;
+    parentDiv.appendChild(div);
+
+    document.body.appendChild(parentDiv);
+  },
+
+  init({ title }) {
+    const finalTitle = title.toLocaleUpperCase();
+    this.setWatermark(finalTitle);
+
+    // 在窗口大小改变之后,自动触发加水印事件
+    window.onresize = () => {
+      this.setWatermark(finalTitle);
+    };
+  },
+};
+WaterMark.init({title:'test'});
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // vue2.0 响应式, 也就是数据和视图双向绑定,我们修改数据如何处罚视图更新, 我们点击视图进行数据更新;
+    // 数据驱动视图 - define
+    const state = {
+      _data:[2,3,4]
+    };
+    Object.defineProperty(state,'data',{
+      set(value){
+        console.log('set',value);
+        this._data = value;
+      },
+      get(key){
+        console.log('get',this._data)
+        return this._data
+      },
+    });
+    console.log(state.data);
+    state.data = [23423]
+    console.log(state);
+  </script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+{
+    "root": {
+        "data": {
+            "id": "cntsb29j2hc0",
+            "created": 1666577186985,
+            "text": "业务结构"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cntsc6k3ll40",
+                    "created": 1666577274695,
+                    "text": "Main"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cntshaabc4g0",
+                            "created": 1666577674631,
+                            "text": "ErrorBoundary"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntshhu2eg00",
+                                    "created": 1666577691064,
+                                    "text": "监听全局Error"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntsj16o1a80",
+                            "created": 1666577811548,
+                            "text": "Router"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntsjwd8zaw0",
+                                    "created": 1666577879426,
+                                    "text": "App"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cntsk0jni940",
+                                            "created": 1666577888521,
+                                            "text": "使用Loadable 高阶组件包一层"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntsn57oia00",
+                                            "created": 1666578133773,
+                                            "text": "Content组件"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cntslg4lk8g0",
+                                                    "created": 1666578000803,
+                                                    "text": "switch(mode)"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cntsmfbg2j40",
+                                                            "created": 1666578077405,
+                                                            "text": "PRD"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cntsqnbe4ag0",
+                                                                    "created": 1666578408272,
+                                                                    "text": "PRD组件"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cntsllcyq480",
+                                                            "created": 1666578012193,
+                                                            "text": "RP"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cntsqj6xp8o0",
+                                                                    "created": 1666578399295,
+                                                                    "text": "RP组件"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cntslzxjexs0",
+                                                            "created": 1666578043912,
+                                                            "text": "Design"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cntsqfqh0080",
+                                                                    "created": 1666578391770,
+                                                                    "text": "Design组件（设计稿页面）"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cntsrpts6000",
+                                                                            "created": 1666578492102,
+                                                                            "text": "KonvaStoryboard（cvance画板组件）"
+                                                                        },
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cntsryqrvh40",
+                                                                            "created": 1666578511511,
+                                                                            "text": "Storyboard（普通画板组件）",
+                                                                            "expandState": "expand"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "cntss8wivm00",
+                                                                                    "created": 1666578533626,
+                                                                                    "text": "PagesContainer（画板-图片/连接线）"
+                                                                                },
+                                                                                "children": [
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cntt040c3nc0",
+                                                                                            "created": 1666579149886,
+                                                                                            "text": "Line（连接线组件）"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cntt0a60pjk0",
+                                                                                            "created": 1666579163291,
+                                                                                            "text": "Page（图片组件）"
+                                                                                        },
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "cntt3elm93c0",
+                                                                                                    "created": 1666579408033,
+                                                                                                    "text": "Wrapper"
+                                                                                                },
+                                                                                                "children": [
+                                                                                                    {
+                                                                                                        "data": {
+                                                                                                            "id": "cntt3kxpftc0",
+                                                                                                            "created": 1666579421825,
+                                                                                                            "text": "PageDot"
+                                                                                                        },
+                                                                                                        "children": []
+                                                                                                    },
+                                                                                                    {
+                                                                                                        "data": {
+                                                                                                            "id": "cntt4248zso0",
+                                                                                                            "created": 1666579459227,
+                                                                                                            "text": "Content"
+                                                                                                        },
+                                                                                                        "children": [
+                                                                                                            {
+                                                                                                                "data": {
+                                                                                                                    "id": "cntt55poke00",
+                                                                                                                    "created": 1666579545417,
+                                                                                                                    "text": "SwiperPages组件"
+                                                                                                                },
+                                                                                                                "children": []
+                                                                                                            },
+                                                                                                            {
+                                                                                                                "data": {
+                                                                                                                    "id": "cntt59ft3go0",
+                                                                                                                    "created": 1666579553527,
+                                                                                                                    "text": "TypedPage组件"
+                                                                                                                },
+                                                                                                                "children": [
+                                                                                                                    {
+                                                                                                                        "data": {
+                                                                                                                            "id": "cnttalhf9vk0",
+                                                                                                                            "created": 1666579971567,
+                                                                                                                            "text": "判断：shouldShowRP"
+                                                                                                                        },
+                                                                                                                        "children": [
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "cnttb2vw5280",
+                                                                                                                                    "created": 1666580009447,
+                                                                                                                                    "text": "RPPage组件"
+                                                                                                                                },
+                                                                                                                                "children": []
+                                                                                                                            },
+                                                                                                                            {
+                                                                                                                                "data": {
+                                                                                                                                    "id": "cnttba5ib600",
+                                                                                                                                    "created": 1666580025266,
+                                                                                                                                    "text": "ImagePage组件"
+                                                                                                                                },
+                                                                                                                                "children": [
+                                                                                                                                    {
+                                                                                                                                        "data": {
+                                                                                                                                            "id": "cnttcyuxt0g0",
+                                                                                                                                            "created": 1666580157410,
+                                                                                                                                            "text": "判断"
+                                                                                                                                        },
+                                                                                                                                        "children": [
+                                                                                                                                            {
+                                                                                                                                                "data": {
+                                                                                                                                                    "id": "cnttd19tziw0",
+                                                                                                                                                    "created": 1666580162665,
+                                                                                                                                                    "text": "Huge"
+                                                                                                                                                },
+                                                                                                                                                "children": []
+                                                                                                                                            },
+                                                                                                                                            {
+                                                                                                                                                "data": {
+                                                                                                                                                    "id": "cnttdhbzrz40",
+                                                                                                                                                    "created": 1666580197624,
+                                                                                                                                                    "text": "NormalImage"
+                                                                                                                                                },
+                                                                                                                                                "children": []
+                                                                                                                                            }
+                                                                                                                                        ]
+                                                                                                                                    }
+                                                                                                                                ]
+                                                                                                                            }
+                                                                                                                        ]
+                                                                                                                    }
+                                                                                                                ]
+                                                                                                            }
+                                                                                                        ]
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cntsm4dfzc00",
+                                                            "created": 1666578053581,
+                                                            "text": "Prototype"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cntsqc8ck000",
+                                                                    "created": 1666578384143,
+                                                                    "text": "Prototype组件"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cntsp2ccxyw0",
+                                                            "created": 1666578284254,
+                                                            "text": "Doc"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cntsq94i1l40",
+                                                                    "created": 1666578377380,
+                                                                    "text": "Doc组件"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cntsp6sy52g0",
+                                                            "created": 1666578293964,
+                                                            "text": "Style"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cntsq593gr40",
+                                                                    "created": 1666578368951,
+                                                                    "text": "Style组件"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cntspb928ww0",
+                                                            "created": 1666578303646,
+                                                            "text": "Activity"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cntsq2mwd1c0",
+                                                                    "created": 1666578363255,
+                                                                    "text": "Activity组件"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cntspjhju3s0",
+                                                            "created": 1666578321573,
+                                                            "text": "Task/TaskManage"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cntspt0l2y80",
+                                                                    "created": 1666578342315,
+                                                                    "text": "Task组件"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntsnj8tqn40",
+                                            "created": 1666578164317,
+                                            "text": "Tree组件"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnuma3c7e1k0",
+                                                    "created": 1666661744256,
+                                                    "text": "TreeTools（组件树头部工具栏）"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cnumanwipao0",
+                                                    "created": 1666661789020,
+                                                    "text": "TreeContent（树主体）"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cnumaztr68w0",
+                                                    "created": 1666661814974,
+                                                    "text": "Trash（回收站）"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntsnyeimso0",
+                                            "created": 1666578197313,
+                                            "text": "Workflow组件"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntso43q3080",
+                                            "created": 1666578209721,
+                                            "text": "AppPops组件"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cntsc9zn2g00",
+                    "created": 1666577282165,
+                    "text": "TxConfig"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cntsd2cia2g0",
+                    "created": 1666577343893,
+                    "text": "DevConfig"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cntsdaj83280",
+                            "created": 1666577361713,
+                            "text": "开发配置项组件"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

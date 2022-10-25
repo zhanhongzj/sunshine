@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .content {
+      height: 1300px;
+    }
+    .img-content {
+      /* height: 30px;
+      width: 30px; */
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+
+  </div>
+  <div>
+    <img class="img-content" data-src="./img/zznh.png" data-name="zhan" src="./img/ms.jpg" alt="img">
+  </div>
+</body>
+<script>
+  // 复习节流函数
+  function throttle(fn,time){
+    let startTime = 0;
+    return function(...arg){
+      const nowTime = Date.now();
+      if(nowTime - startTime > time){
+        fn.apply(this,arg);
+        startTime = nowTime;  
+      }// 屏幕
+    }
+  }
+  const ele = document.querySelector('.img-content');
+  function onImgLoad(){
+    console.log('执行一次',ele.dataset);
+    if(ele.getBoundingClientRect().top<window.innerHeight){
+      console.log(11111);
+      console.log(ele.dataset.name);
+      ele.src = ele.dataset.src;
+    }
+  }
+  const throttleLoad = throttle(onImgLoad,1000);
+  window.addEventListener('scroll',throttleLoad);
+</script>
+</html>

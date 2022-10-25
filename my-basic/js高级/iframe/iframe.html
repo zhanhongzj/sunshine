@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="test">1</div>
+  <button class="cl">
+    点击
+  </button>
+  <a href="//www.baidu.com" target="_self">跳转</a>
+  <script>
+    const ele = document.querySelector('#test');
+    const cl = document.querySelector('.cl');
+    function on(text){
+      ele.textContent = text;
+    }
+
+    window.onmessage = (event)=>{
+      console.log(event);
+      ele.textContent = event.data;
+    };
+    cl.onclick = ()=>{
+      window.parent.location.href = 'https://juejin.cn/post/6989011281424416776'
+    };
+  </script>
+</body>z
+</html>

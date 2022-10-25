@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="h1"></h1>
+  <script>
+    const ele = document.querySelector('#h1');
+    // 使用 Object.defineProperty  getter函数和 setter函数进行对象属性修改的监控
+    let obj = {_a:2,b:3};
+    Object.defineProperties(obj,{
+      a:{
+        enumerable:true,
+        get(){
+          console.log('获取a属性值');
+          console.log(this);
+          return this._a;
+        },
+        set(v){
+          console.log('obj对象进行了修改');
+          ele.textContent = v;
+          this._a = v;
+        }
+      },
+      _a:{
+        enumerable:false,
+      }
+    });
+    // obj.a = 23;
+    // console.log(obj,obj.a);
+
+
+    // Proxy 对对象的监听
+    const PObj = new Proxy(obj,{
+      get(target,key){
+        console.log('proxy监听get',target[key]);
+        return target[key]
+      },
+      set(target,key,value){
+        console.log('proxy监听set',key,value);
+        target[key] = value;
+      },
+      has(target,key){
+        console.log('has捕获器',key,);
+        return key in target;
+      },
+      deleteProperty(target,key){
+        console.log('delete捕获器',key,);
+        return delete target[key];
+      },
+    });
+    PObj.b = '234235vsadgfdsag'
+    console.log(PObj.b,'b' in PObj);
+    delete PObj.b;
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 关于对象的 引用赋值 , 直接使用 = 赋值, 或者 写入 数组, 对象中属性中: 相当于把对象的内存地址 0bxx2c 赋值给了对应的值.
+    // 关于对象的 浅拷贝 , 重新建立一个对象, 将原来对象的第一层属性和属性值进行拷贝, 如果属性中还有对象, 拷贝前后依旧公用. 常见的浅拷贝方法: 解构,Object.assign
+    // 深拷贝, 新建一个对象, 和原有对象保持完全独立,相互不影响
+
+    function isObj(x){
+      // return Object.prototype.toString.call(x) === '[object Object]';
+      const y = typeof x;
+      return x!==null && (y ==='object' || y === 'function')
+    };
+    function deepCopy(init){
+      if(!isObj(init)){
+        return init;
+      };
+      const newObj = Array.isArray(init)?[]:{};
+      for(const key in init){
+        if(Reflect.has(init,key)){
+          newObj[key] = isObj(init[key])?deepCopy(init[key]):init[key];
+        }
+      }
+      return newObj;
+    }
+    const b = {a:24,b:{c:34,d:345}}
+    const a = [23,{a:234},b];
+    const c = deepCopy(a);
+    console.log(c, c.a === a, c[2] === a[2])
+  </script>
+</body>
+</html>

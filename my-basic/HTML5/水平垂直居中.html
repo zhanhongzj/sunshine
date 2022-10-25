@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 水平居中 */
+       /* 行内元素-inline，inline-block - text-align:center; */
+    /* 水平居中 */
+    /* 行内元素  子元素设置 line-height = 父元素高度； 或者父元素设置：display：table-cell；子元素：vertical-align：middle*/
+/* 
+     .sub-box{
+      display: inline-block;
+      line-height: 300px;
+     }
+     .box{
+      width:100%;
+      height:300px;
+      display: table-cell;
+      text-align: center;
+      border:1px solid;
+      line-height: 100%;
+      vertical-align: middle;
+     } */
+
+
+     /* 水平垂直居中
+     块级元素*/
+     /* 1.定位法  父元素设置*/
+    .sub-box{
+      width:100px;
+      height: 120px;
+      background-color: pink;
+      position:absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50px,-60px);
+    }
+    .box{
+      height:500px;
+      background-color: gray;
+      position: relative;
+    }
+  </style>
+ </head>
+ <body>
+  <div class="box">
+    <div class="sub-box">342334</div>
+  </div>
+ </body>
+ </html>

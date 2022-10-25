@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box{
+      height:20px;
+      /* background-color: pink; */
+    }
+    .content {
+      height: 20px;
+      background-color: green;
+      overflow: hidden;
+    }
+    .title{
+      height: 10px;
+      background-color: black;
+      margin-top:10px;
+      margin-left:10px;
+    }
+
+    .outer {
+      height:600px;
+      background-color: gray;
+    }
+    .left {
+      height:100%;
+      width:100px;
+      float: left;
+      background-color: aqua;
+      word-break: break-word;
+      /* white-space: break-word; */
+    }
+    .right {
+      height:100%;
+      background-color: pink;
+      /* overflow: hidden; */
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <div class="content">
+    <div class="title">title</div>
+  </div>
+
+  <div class="outer">
+    <div class="left">@@@@@@@@@</div>
+    <div class="right">12432</div>
+  </div>
+</body>
+</html>

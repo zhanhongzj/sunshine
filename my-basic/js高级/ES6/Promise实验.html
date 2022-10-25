@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function requestUrl(url){
+      return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+          console.log(url);
+          resolve(url);
+        },3000);
+      });
+    };
+    //clg
+    // 连续三次调用,不能形成回调地域 callback hell
+    // requestUrl('token').then(v=>{
+    //   return requestUrl('name')
+    // }).then(v=>{
+    //   return requestUrl('value');
+    // }).then(v=>{
+    //   console.log('最后一次获取结果',v);
+    // })
+
+    // 链式调用也不够优雅 , 使用generator 函数进行优化
+    function* foo(){
+      const v1 = yield requestUrl('token1');
+      const v2 = yield requestUrl('name2');
+      const v3 = yield requestUrl('value3');
+      console.log('最后一次执行结果3',v3);
+    }
+   // 自执行函数 - 递归
+   function ecuFoo(f){
+    const gen = f();
+    t();
+    function t(res){
+      const v = gen.next(res);
+      console.log(v);
+      if(v.done) return;
+      v.value.then(c=>{
+        t(c);
+      })
+    };
+   }
+   ecuFoo(foo);
+  </script>
+</body>
+</html>

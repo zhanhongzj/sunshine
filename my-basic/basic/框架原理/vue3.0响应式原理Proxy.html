@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 由于Object.definePropery 深度递归问题, new property 和 delete property 不能被监听
+    // 引入了ES6新特性Proxy 对对象进行监听
+
+    const state = {
+      data:[12,324,24]
+    };
+    const PState = new Proxy(state,{
+      set:function(target,key,value){
+        console.log('set')
+        target[key] = value;
+        Reflect.set(target,key,value);
+      },
+      get:function(target,key){
+        console.log('get');
+        return target[key]
+      },
+      deleteProperty: function(target,key){
+        console.log('delete');
+        delete target[key]
+      },
+    });
+    console.log(PState.data);
+    PState.data.push(234);
+    // PState.data = [12,23]
+    delete PState.data
+  </script>
+</body>
+</html>

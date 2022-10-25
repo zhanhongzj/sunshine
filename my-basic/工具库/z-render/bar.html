@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/zrender@4.3.0/dist/zrender.js"></script>
+</head>
+<body>
+   <div id="bar" style="width: 1000px; height: 400px"></div>
+  <script>
+    // 初始化zrender实例
+    const zr = zrender.init(document.getElementById('bar'));
+    </script>
+</body>
+  <script>
+    // 创建图形
+       const bar = new zrender.Rect({
+      shape: {
+            cx: 0,
+            cy: 0,
+            width: 20,
+            height: 0,
+          },
+          style: {
+            fill: 'red',
+          },
+          position: [100, 100],
+    })
+ bar.animateTo({
+    shape:{
+        cx: 0,
+        cy: 0,
+        width: 20,
+        height: 90,   
+    },
+    position: [100,10]
+})
+    zr.add(bar);
+  </script>
+</html>

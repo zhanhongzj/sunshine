@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" class="input"><button>搜索</button><button class="cancel">取消搜索</button>
+  <script>
+    function debounce(fn,delay){
+      let timer = null;
+       function _debounce (...arg){
+        if(timer){
+          clearTimeout(timer);
+        }
+       timer = setTimeout(()=>{
+          fn.apply(this,arg);
+          timer = null;
+        },delay)
+      }
+      _debounce.onCancel = ()=>{
+        if(timer) clearTimeout(timer);
+      };
+      return _debounce;
+    }
+
+
+    const ele = document.querySelector('.input');
+    const eleCancel = document.querySelector('.cancel');
+    const search = debounce(fn,3000);
+    eleCancel.onclick = function(){
+      search.onCancel();
+    }
+    function fn(event){
+      console.log(this.value,event.target.value);
+    }
+    // ele.oninput = fn;
+    ele.oninput = search;
+  </script>
+</body>
+</html>

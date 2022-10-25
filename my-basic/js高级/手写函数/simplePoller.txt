@@ -1,0 +1,14 @@
+function simplePoller(queryFn ,callback){
+  let time = 1000;
+  return function poller(){
+    const timer= setTimeout(() => {
+      if(queryFn()){
+        callback();
+        clearTimeout(timer);
+      }else{
+        time*=1.5;
+        poller();
+      }
+    }, time);
+  };
+}

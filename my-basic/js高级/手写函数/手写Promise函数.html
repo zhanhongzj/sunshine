@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const PENDING = 'pending';
+    const FULFILLED = 'fulfilled';
+    const REJECTED = 'rejectd';
+    class MyPromise {
+      constructor(fn){
+        this.state = PENDING;
+        this.resulte = null;
+        this.reason = null;
+        this.successFn = [];
+        this.errorFn = [];
+        const resolve = (data)=>{
+          // console.log('ZHIXING',data,this)
+          if(this.state !== PENDING) return;
+          this.state = FULFILLED;
+          this.resulte = data;
+          this.successFn.forEach(callback=>{
+            callback(data);
+          });
+        };
+        const reject = (data)=>{
+          if(this.state !== PENDING) return;
+          this.state = REJECTED;
+          this.reason = data;
+          this.errorFn.forEach(callback=>{
+            callback(new Error(data));
+          });
+        }
+        try{
+          fn(resolve,reject);
+        }catch(v){
+          reject(v);
+        }
+      }
+      static all(arr){
+        let count = 0;
+        let result = [];
+        return new MyPromise((resolve,reject)=>{
+          for(let i=0;i<arr.length;i++){
+            MyPromise.resolve(arr[i]).then(v=>{
+              count++;
+              result[i] = v;
+              if(count === arr.length){
+                resolve(result);
+              };
+            },e=>{
+              console.log('执行');
+              reject(e);
+            })
+          }
+        });
+      };
+      static any(){};
+      static race(arr){
+        return new MyPromise((resolve,reject)=>{
+          for(let i=0;i<arr.length;i++){
+            MyPromise.resolve(arr[i]).then(v=>{
+                resolve(v);
+            },e=>{
+              console.log('执行');
+              reject(e);
+            })
+          }
+        });
+      };
+      static allsettled(arr){
+        let count = 0;
+        let result = [];
+        return new MyPromise((resolve,reject)=>{
+          for(let i=0;i<arr.length;i++){
+            MyPromise.resolve(arr[i]).then(v=>{
+              count++;
+              result[i] = {status:FULFILLED,value:v}
+              if(count === arr.length){
+                resolve(result);
+              };
+            },e=>{
+              count++;
+              result[i] = {status:REJECTED,reason:e.message}
+              if(count === arr.length){
+                resolve(result);
+              };
+            })
+          }
+        });
+      };
+      static resolve(v){
+        if(v instanceof MyPromise){
+          return v;
+        }
+        return new MyPromise(resolve=>{
+          resolve(v);
+        })
+      };
+      static reject(){};
+      then(s,e){
+        if(this.state === FULFILLED){
+          return new MyPromise((resolve,reject)=>{
+            try{
+              resolve(s(this.resulte));
+            }catch(e){
+              reject(e);
+            };
+          });
+        }
+        if(this.state === REJECTED){
+          return new MyPromise((resolve,reject)=>{
+            const err = new Error(this.reason);
+              e(err);
+              reject(err);
+          });
+        }
+        if(this.state === PENDING){
+          return new MyPromise((resolve,reject)=>{
+            if(typeof s === 'function'){
+              const fn = (data)=>{
+                resolve(s(data));
+              };
+              this.successFn.push(fn);
+            }
+            if(typeof e === 'function'){
+              const fn = (data)=>{reject(e(data));};
+              this.errorFn.push(fn);
+            }
+          })
+        }
+      };
+      catch(fn){
+        this.then(_,fn);
+      };
+      finally(fn){
+        this.then(()=>{
+          fn()
+        },
+        ()=>{
+          fn();
+        }
+        );
+      };
+    }
+    const a = new MyPromise((resolve,reject)=>{setTimeout(() => {
+      reject(1);
+    }, 3000);});
+    const b = new MyPromise((resolve,reject)=>{setTimeout(() => {
+      resolve(2);
+    }, 1000);});
+    const c = MyPromise.allsettled([a,b]);
+    console.log(c);
+    c.then(v=>console.log(v),(err)=>{console.log('err',err.message)})
+  </script>
+</body>
+</html>

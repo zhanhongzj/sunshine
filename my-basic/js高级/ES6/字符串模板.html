@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 普通用法
+    function add(name,age){
+      console.log(`my name is${name},age is${age}`);
+    }
+    add('zhan hong',29);
+    // 标签模板字符串 - 采用字符串模板进行函数调用的方法
+    function newAdd(...arg){
+      console.log(arg);
+    };
+    const name = '1';
+    const age = 23;
+    newAdd`my name is ${name},age is ${age}`
+  </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function* foo(){
+    //   const v1 = 54;
+    //   const t1 = yield v1;
+    //   console.log('t1',t1);
+    //   const v2 = 52;
+    //   yield v2;
+    //   const v3 = 55;
+    //   yield v3;
+    // };
+    // const gen = foo();
+    // const a1 = gen.next();
+    // console.log(a1);
+    // gen.next(a1.value);
+
+    // Iterator 迭代器
+    // 原生可迭代对象, 对象底层有实现 [Symbol.iterator] 属性
+    // 将 obj 实现为可迭代对象;
+
+    // 方式一
+    // let  index = 0;
+    // const obj = {
+    //   a:1,
+    //   b:2,
+    //   c:[4,5,6,7,8],
+    //   [Symbol.iterator]:function(){
+    //     return {       
+    //        next: ()=>{
+    //       if(index>this.c.length-1) return {done:true}
+    //       return {value:this.c[index++],done:false}
+    //     }}
+    //   }
+    // }
+
+
+
+
+
+    // 方式二 利用闭包,降低代码耦合性
+    // function iteratorFun(){
+    //   let index = 0;
+    //     return {
+    //       next:()=>{
+    //         if(index > this.c.length-1) return {done: true}
+    //         return {done:false, value:this.c[index++]}
+    //       }
+    //   };
+    // }
+
+    // const obj = {
+    //   a:1,b:3,
+    //   c:[1,2,3,4],
+    //   [Symbol.iterator]:iteratorFun
+    // };
+    // for(const a of obj) {
+    //   console.log(a);
+    // }
+
+
+
+
+    // 方式三: 将迭代属性写入到构造函数中, 让new 出来的新对象都能通过prototype 访问该属性
+    // class Foo {
+    //   constructor(name,age,inters){
+    //     this.name = name;
+    //     this.age = age;
+    //     this.inters = inters;
+    //   }
+    //   [Symbol.iterator](){
+    //     let index = 0;
+    //     return {
+    //       next:()=>{
+    //         if(index > this.inters.length - 1) return {done:true};
+    //         return {done:false,value:this.inters[index++]}
+    //       }
+    //     }
+    //   }
+    // }
+    // const obj = new Foo('zhan',18,[1,2,3,4]);
+    // console.log(obj);
+    // for(const item of obj){
+    //   console.log(item);
+    // }
+    // 方式三: 将迭代属性写入到构造函数中, 让new 出来的新对象都能通过prototype 访问该属性
+
+
+    // 方式四: 利用Generator进行重写
+    class Foo {
+      constructor(name,age,inters){
+        this.name = name;
+        this.age = age;
+        this.inters = inters;
+      }
+      *[Symbol.iterator](){
+        // let index = 0;
+        // if(index < this.inters.length - 1) yield {done:true};
+        // yield {done:false,value:this.inters[index++]}\
+        yield* Object.keys(this)
+      }
+    }
+    const obj = new Foo('zhan',18,[1,2,3,4]);
+    console.log(obj);
+    for(const item of obj){
+      console.log(item);
+    }
+
+    // 默认的可迭代对象, stinrg的包装类型, Set类型, Array, arguments,Map,NodeList
+    // 可迭代对象D 特殊属性
+    // 1.Array.from(D); 可迭代的部分可生成一个数组.
+    // 2.new Set(D); 可迭代的部分可生成一个Set数据类型
+    // 3. ...D 可生成遍历类型, function(...arr){}
+    // 4.yeild* D; 可直接遍历整个可迭代对象 for of部分,
+
+
+    // 实现一个Array.from方法
+    Array.myFrom = (s)=>{
+      const arr = [];
+      for(const curr of s){
+        arr.push(curr);
+      }
+      return arr;
+    }
+    console.log('自定义Array.from函数',Array.myFrom(obj));
+    // new Set实验
+    const s1 = new Set(obj)
+    console.log(s1,[...s1]);
+    // ...D 生成遍历类型实验
+    function foo1(a,b,c){
+      console.log(a,b,c);
+    }
+    foo1(...obj);
+  </script>
+</body>
+</html>

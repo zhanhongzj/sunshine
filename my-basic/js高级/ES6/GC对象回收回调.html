@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let obj = {a:2};
+    const a = new WeakMap();
+    a.set(obj,{b:3});
+    console.log(a);
+    const f = new FinalizationRegistry((value)=>{
+      console.log(value + '对象被回收了',a);
+    });
+    console.log(f);
+    f.register(obj,'obj');
+    obj = null;
+  </script>
+</body>
+</html>

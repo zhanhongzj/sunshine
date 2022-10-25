@@ -1,0 +1,892 @@
+{
+    "root": {
+        "data": {
+            "id": "cntrjdvuow80",
+            "created": 1666575018082,
+            "text": "MainTopic"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cntrjtl8lbs0",
+                    "created": 1666575052269,
+                    "text": "Idoc"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cntrjtlaeeo0",
+                            "created": 1666575052272,
+                            "text": ".husky"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntrjtla54o0",
+                                    "created": 1666575052272,
+                                    "text": "husky 配置文件：git hook工具（lint-staged）"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlajyw0",
+                                            "created": 1666575052272,
+                                            "text": "pre-commit：在提交commit时触发"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtla9d40",
+                                            "created": 1666575052272,
+                                            "text": "commit-msg：检测commit的message时触发"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtlaoyw0",
+                                    "created": 1666575052273,
+                                    "text": "资料：https://juejin.cn/post/6994646129962909710"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlatog0",
+                            "created": 1666575052273,
+                            "text": "configs"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntrjtlanvk0",
+                                    "created": 1666575052273,
+                                    "text": "webpack相关配置",
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlb2co0",
+                                            "created": 1666575052273,
+                                            "text": "configs\\webpack.common.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlaqi80",
+                                            "created": 1666575052273,
+                                            "text": "configs\\webpack.dev.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlan400",
+                                            "created": 1666575052273,
+                                            "text": "configs\\webpack.prod.en.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlb1ko0",
+                                            "created": 1666575052273,
+                                            "text": "configs\\webpack.prod.hw.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlbpxs0",
+                                            "created": 1666575052274,
+                                            "text": "configs\\webpack.prod.hwsjcc.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlbmug0",
+                                            "created": 1666575052274,
+                                            "text": "configs\\webpack.prod.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlbb9c0",
+                                            "created": 1666575052274,
+                                            "text": "configs\\webpack.prod.pd.en.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlbfkw0",
+                                            "created": 1666575052274,
+                                            "text": "configs\\webpack.prod.pd.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlbi680",
+                                            "created": 1666575052274,
+                                            "text": "configs\\webpack.prod.pd.tw.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlbdeg0",
+                                            "created": 1666575052274,
+                                            "text": "configs\\webpack.test.en.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlbgxs0",
+                                            "created": 1666575052274,
+                                            "text": "configs\\webpack.test.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlb8go0",
+                                            "created": 1666575052274,
+                                            "text": "configs\\webpack.tree.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlbgoo0",
+                                            "created": 1666575052274,
+                                            "text": "configs\\webpack.zip.dev.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlbrg80",
+                                            "created": 1666575052274,
+                                            "text": "configs\\webpack.zip.js"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtlbju00",
+                                    "created": 1666575052274,
+                                    "text": "data"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlbk2w0",
+                            "created": 1666575052274,
+                            "text": "docs"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntrjtlcc6o0",
+                                    "created": 1666575052275,
+                                    "text": "业务文档",
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlcagg0",
+                                            "created": 1666575052275,
+                                            "text": "annotation.md - 标注工具"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlc4680",
+                                            "created": 1666575052275,
+                                            "text": "canvasBoard.md - 画板"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlccfc0",
+                                            "created": 1666575052275,
+                                            "text": "classTree.md - 树结构"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlc8y80",
+                                            "created": 1666575052275,
+                                            "text": "contentMenu.md 右键菜单"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlcc6g0",
+                                            "created": 1666575052275,
+                                            "text": "doc.md - 资源管理"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlcc7s0",
+                                            "created": 1666575052275,
+                                            "text": "header.md 页面顶部导航"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlbw880",
+                                            "created": 1666575052275,
+                                            "text": "Interaction.md"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cntrjtlc22o0",
+                                                    "created": 1666575052275,
+                                                    "text": "数组-树结构转化"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlbyko0",
+                                            "created": 1666575052275,
+                                            "text": "Pin.md - 评论模式下，图钉标注"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlcamw0",
+                                            "created": 1666575052275,
+                                            "text": "prd.md - 自建文档"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlcu6g0",
+                                            "created": 1666575052276,
+                                            "text": "preview.md - 模块内实现用户自定义交互"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlcw0g0",
+                                            "created": 1666575052276,
+                                            "text": "projectTree.md- 设计稿，单页，RP需要共同的项目树"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlckr40",
+                                            "created": 1666575052276,
+                                            "text": "docs\\RightPanel.md - 右侧面板的展示expandRightPanel，通过触发事件并存储Cache来判断当前mode是否展开"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlcs9c0",
+                                            "created": 1666575052276,
+                                            "text": "slice.md"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlcsjc0",
+                                            "created": 1666575052276,
+                                            "text": "styleGuide.md - 代码规范，getAllStyleGuide获取所有规范"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlcseg0",
+                                            "created": 1666575052276,
+                                            "text": "tree.md - 树组件"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlchts0",
+                                            "created": 1666575052276,
+                                            "text": "workspace.md - 拖动空间"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlcwso0",
+                            "created": 1666575052276,
+                            "text": "node_modules"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntrjtlcfxc0",
+                                    "created": 1666575052276,
+                                    "text": "node安装包资源"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtlcrp40",
+                                    "created": 1666575052276,
+                                    "text": ".bin"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlcm2o0",
+                            "created": 1666575052276,
+                            "text": "script"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntrjtlcxqo0",
+                                    "created": 1666575052276,
+                                    "text": "脚本",
+                                    "expandState": "collapse"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlcsoo0",
+                                            "created": 1666575052276,
+                                            "text": "dev.js"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlcfow0",
+                                            "created": 1666575052276,
+                                            "text": "test.js"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtldhgg0",
+                            "created": 1666575052277,
+                            "text": "src",
+                            "expandState": "expand"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntrjtld4xs0",
+                                    "created": 1666575052277,
+                                    "text": "apis"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtld9gg0",
+                                    "created": 1666575052277,
+                                    "text": "src\\assets"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cntrjtld4hc0",
+                                            "created": 1666575052277,
+                                            "text": "静态资源"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cntrxq694vc0",
+                                                    "created": 1666576141931,
+                                                    "text": " "
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtldih40",
+                                    "created": 1666575052277,
+                                    "text": "src\\components"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cntrjtld8fk0",
+                                            "created": 1666575052277,
+                                            "text": "App"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cnts1jgggn40",
+                                            "created": 1666576440767,
+                                            "text": "StoryBoard"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnts3a4v8sw0",
+                                                    "created": 1666576577204,
+                                                    "text": "画板组件"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cnts4gmloeg0",
+                                            "created": 1666576669701,
+                                            "text": "ProjectTree"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnts7dm81fc0",
+                                                    "created": 1666576898240,
+                                                    "text": "项目树"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtle2e80",
+                                    "created": 1666575052278,
+                                    "text": "src\\constants"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cntrjtle0g80",
+                                            "created": 1666575052278,
+                                            "text": "常量"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtldnbc0",
+                                    "created": 1666575052278,
+                                    "text": "src\\context"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtldy1k0",
+                                    "created": 1666575052278,
+                                    "text": "src\\helper"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtldq0w0",
+                                    "created": 1666575052278,
+                                    "text": "src\\hooks"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtldx600",
+                                    "created": 1666575052278,
+                                    "text": "src\\models"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtldmaw0",
+                                    "created": 1666575052278,
+                                    "text": "src\\redux"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cntrjtldyw00",
+                                            "created": 1666575052278,
+                                            "text": "页面模块"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtldy5c0",
+                                            "created": 1666575052278,
+                                            "text": "actions.ts"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtldv9c0",
+                                            "created": 1666575052278,
+                                            "text": "index.ts"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtle3wg0",
+                                            "created": 1666575052278,
+                                            "text": "reducer.ts"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtldpb40",
+                                            "created": 1666575052278,
+                                            "text": "saga.ts"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtldz7c0",
+                                            "created": 1666575052278,
+                                            "text": "store.ts"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtle6u00",
+                                            "created": 1666575052278,
+                                            "text": "tyles.ts"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtldsdc0",
+                                    "created": 1666575052278,
+                                    "text": "src\\workers"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtlek8g0",
+                                    "created": 1666575052279,
+                                    "text": "src\\zip"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtle83s0",
+                                    "created": 1666575052279,
+                                    "text": "index.html"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtleaxs0",
+                                    "created": 1666575052279,
+                                    "text": "index.scss"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtled1c0",
+                                    "created": 1666575052279,
+                                    "text": "index.tsx"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtlepb40",
+                                    "created": 1666575052279,
+                                    "text": "git modules 引入包"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlel940",
+                                            "created": 1666575052279,
+                                            "text": "dsm"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlesk00",
+                                            "created": 1666575052279,
+                                            "text": "fbs"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtlefvc0",
+                                            "created": 1666575052279,
+                                            "text": "i18n"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtleke80",
+                                            "created": 1666575052279,
+                                            "text": "md"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cntrjtlepo00",
+                                                    "created": 1666575052279,
+                                                    "text": "UI组件库"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cntrjtle7y80",
+                                            "created": 1666575052279,
+                                            "text": "wemeet"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlepi80",
+                            "created": 1666575052279,
+                            "text": "types"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntrjtlefz40",
+                                    "created": 1666575052279,
+                                    "text": "全局ts类型声明"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtleioo0",
+                            "created": 1666575052279,
+                            "text": ".cz-config"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntrjtlec7c0",
+                                    "created": 1666575052279,
+                                    "text": "cz git配置"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlerm80",
+                            "created": 1666575052279,
+                            "text": ".eslintrc"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntrjtleyc80",
+                                    "created": 1666575052280,
+                                    "text": "eslint配置：检查js/ts代码规范"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cntrjtlf7go0",
+                                    "created": 1666575052280,
+                                    "text": "study："
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtley8w0",
+                            "created": 1666575052280,
+                            "text": ".gitmodules"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlewi00",
+                            "created": 1666575052280,
+                            "text": ".prettierrc"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntrjtlfc680",
+                                    "created": 1666575052280,
+                                    "text": "prettier配置：在编译器中进行格式化代码"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlf1lc0",
+                            "created": 1666575052280,
+                            "text": ".stylelintrc.js"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlf2s00",
+                            "created": 1666575052280,
+                            "text": "babel.config.json"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlevco0",
+                            "created": 1666575052280,
+                            "text": "commitlint.config.js"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlfbew0",
+                            "created": 1666575052280,
+                            "text": "package-lock.json、yarn.lock"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtleux40",
+                            "created": 1666575052280,
+                            "text": "package.json"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlf78o0",
+                            "created": 1666575052280,
+                            "text": "postcss.config.js"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtleuls0",
+                            "created": 1666575052280,
+                            "text": "tsconfig.dev.json"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlf2mo0",
+                            "created": 1666575052280,
+                            "text": "tsconfig.json"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cntrjtlf6jk0",
+                                    "created": 1666575052280,
+                                    "text": ""
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cntrjtlfbsw0",
+                            "created": 1666575052280,
+                            "text": "README.md"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

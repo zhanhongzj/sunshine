@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 测试 async , awaite 函数中, awaite 一个非Promise时候, 后续代码是否假如到微任务队列中
+    // 猜想: 要假如. 就好比,Promise中,直接resolve一个数值, then中方法执行依旧会被假如到微任务中一样
+    // async function test(){
+    //   console.log('async1');
+    //   await 1;
+    //   console.log('async2');
+    // };
+    // console.log('start');
+    // test();
+    // console.log('end');
+
+    // 结论: 和猜想一致;
+
+    // 实现 getCache, setCache , clearCache
+    class Cache {
+      constructor(type){
+        this.cache = type==='local'?localStorage:sessionStorage;
+      }
+      setCache(key,value){
+        this.cache.setItem(key,JSON.stringify(value));
+      }
+      getCache(key){
+        return JSON.parse(this.cache.getItem(key));
+      }
+      deleteCache(key){
+        this.cache.removeItem(key);
+      }
+      clearCache(){
+        this.cache.clear();
+      }
+    }
+    const sessionCache = new Cache();
+    const localCache = new Cache('local');
+
+    sessionCache.setCache('name',{a:23,b:2323});
+    console.log(sessionCache.getCache('name'));
+    setTimeout(()=>{
+      // sessionCache.deleteCache('name');
+      sessionCache.clearCache();
+      console.log(sessionCache.getCache('name'));
+    },2000);
+  </script>
+</body>
+</html>
