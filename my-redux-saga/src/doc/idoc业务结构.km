@@ -3,7 +3,8 @@
         "data": {
             "id": "cntsb29j2hc0",
             "created": 1666577186985,
-            "text": "业务结构"
+            "text": "业务结构",
+            "font-weight": "bold"
         },
         "children": [
             {
@@ -354,27 +355,53 @@
                                         "children": [
                                             {
                                                 "data": {
-                                                    "id": "cnuma3c7e1k0",
-                                                    "created": 1666661744256,
-                                                    "text": "TreeTools（组件树头部工具栏）"
+                                                    "id": "cnvglh0uh7k0",
+                                                    "created": 1666747269347,
+                                                    "text": "数据层",
+                                                    "layout_right_offset": {
+                                                        "x": 0,
+                                                        "y": 127
+                                                    }
                                                 },
                                                 "children": []
                                             },
                                             {
                                                 "data": {
-                                                    "id": "cnumanwipao0",
-                                                    "created": 1666661789020,
-                                                    "text": "TreeContent（树主体）"
+                                                    "id": "cnvgm3nh1go0",
+                                                    "created": 1666747318605,
+                                                    "text": "组件层",
+                                                    "expandState": "expand",
+                                                    "layout_right_offset": {
+                                                        "x": -3,
+                                                        "y": -64
+                                                    }
                                                 },
-                                                "children": []
-                                            },
-                                            {
-                                                "data": {
-                                                    "id": "cnumaztr68w0",
-                                                    "created": 1666661814974,
-                                                    "text": "Trash（回收站）"
-                                                },
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cnuma3c7e1k0",
+                                                            "created": 1666661744256,
+                                                            "text": "TreeTools（组件树头部工具栏）"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cnumanwipao0",
+                                                            "created": 1666661789020,
+                                                            "text": "TreeContent（树主体）"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cnumaztr68w0",
+                                                            "created": 1666661814974,
+                                                            "text": "Trash（回收站）"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
                                             }
                                         ]
                                     },

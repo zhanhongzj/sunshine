@@ -1,0 +1,3 @@
+[submodule "my-redux-saga/src/lodash"]
+	path = my-redux-saga/src/lodash
+	url = https://github.com/lodash/lodash.git

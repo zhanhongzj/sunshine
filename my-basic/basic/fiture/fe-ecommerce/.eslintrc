@@ -1,0 +1,11 @@
+{
+  "extends": "eslint-config-fiture/ts",
+  "rules": {
+    "@typescript-eslint/naming-convention": 0,
+    "import/extensions": 0,
+    "react/jsx-key": 2,
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "react-hooks/exhaustive-deps": 1,
+    "react/require-default-props": 0
+  }
+}
