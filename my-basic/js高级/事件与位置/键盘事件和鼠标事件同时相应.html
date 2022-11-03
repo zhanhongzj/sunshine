@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="test">test</button>
+    <p id="noContextMenu">这个段落右键菜单已被禁用。</p>
+  </body>
+  <script>
+    // click 与 mousedown（mouseup）区别？ 在点击事件中监听是否同时点击了键盘事件：event.altKey,ctrlKey,metaKey,shiftKey(boolean)
+    // 鼠标右键点击 - mousedown 监听event.button = 0,1 (左右键)
+
+    // 浏览器中鼠标右键默认弹菜单 contenxtmenu事件 - 阻止默认事件 event.preventDefault()
+    // 键盘事件：document.keydown 可通过 event.code 来判断点击点击了哪个按键
+    // 阻止事件冒泡：
+    // event.stopPropagation()、仅能阻止冒泡到父节点
+    // event.stopImmediatePropagation(); 不光能阻止冒泡到父节点，而且能阻止同类订阅事件的执行。react 为合成事件，封装了stopPropagation，但是没有封装stopImmediatePropagation();
+
+    const dom = document.querySelector('#test');
+    dom.oncontextmenu = (e) => {
+      console.log(1111, e.ctrlKey);
+      // e.preventDefault();
+    };
+
+    dom.onclick = (e) => {
+      // event.preventDefault();
+      // event.stopPropagation();
+      // event.stopImmediatePropagation();
+      // 
+      console.log(e, e.button);
+    };
+
+    // document.oncontextmenu = (e) => {
+    //   e.preventDefault();
+    // };
+
+    dom.onmousedown = (e) => {
+      console.log(event.ctrlKey);
+      // console.log(1213, e.button);
+      e.preventDefault();
+    };
+
+    // document.onkeydown = (e) => {
+    //   console.log(e, e.code);
+    // };
+    //
+
+    noContext = document.getElementById('noContextMenu');
+    noContext.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    });
+  </script>
+</html>

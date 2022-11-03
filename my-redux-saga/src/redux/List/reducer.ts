@@ -3,6 +3,7 @@ import { ActionType } from './type';
 
 const initeState = {
   items: [],
+  count:'count'
 };
 
 const reducer = (state: any = initeState, action: any) => {
@@ -14,7 +15,7 @@ const reducer = (state: any = initeState, action: any) => {
       });
     case ActionType.DeleteItem:
       return produce(state, (draft: any) => {
-        const {index} = action?.payload;
+        const { index } = action?.payload;
         draft.items.splice(index, 1);
       });
     case ActionType.ClearItems:

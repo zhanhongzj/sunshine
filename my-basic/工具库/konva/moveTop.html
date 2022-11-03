@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/konva@4.0.18/konva.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Konva Shape Layering Demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+      #buttons {
+        position: absolute;
+        left: 10px;
+        top: 0px;
+      }
+      button {
+        margin-top: 10px;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <div id="buttons">
+      <button id="toTop">Move yellow box to top</button>
+      <button id="toBottom">Move yellow box to bottom</button>
+      <button id="up">Move yellow box up</button>
+      <button id="down">Move yellow box down</button>
+      <button id="zIndex">Set yellow box zIndex to 3</button>
+    </div>
+    <script>
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+
+      var stage = new Konva.Stage({
+        container: 'container',
+        width: width,
+        height: height,
+      });
+
+      var layer = new Konva.Layer();
+      var layer2 = new Konva.Layer();
+
+      var offsetX = 0;
+      var offsetY = 0;
+      var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple'];
+      var yellowBox = null;
+
+      for (var n = 0; n < 6; n++) {
+        // anonymous function to induce scope
+        (function () {
+          var i = n;
+          var box = new Konva.Rect({
+            x: i * 30 + 210,
+            y: i * 18 + 40,
+            width: 100,
+            height: 50,
+            fill: colors[i],
+            stroke: 'black',
+            strokeWidth: 1,
+            draggable: true,
+            name: `rect_${colors[i]}`,
+          });
+
+          box.on('mouseover', function () {
+            document.body.style.cursor = 'pointer';
+          });
+          box.on('mouseout', function () {
+            document.body.style.cursor = 'default';
+          });
+          if (colors[i] === 'yellow') {
+            yellowBox = box;
+          }
+          layer.add(box);
+        })();
+      }
+
+      stage.add(layer).add(layer2);
+
+      // add button event bindings
+      document.getElementById('toTop').addEventListener(
+        'click',
+        function (event) {
+          console.log(event.metaKey);
+          yellowBox.moveToTop();
+          layer.draw();
+        },
+        false,
+      );
+
+      document.getElementById('toBottom').addEventListener(
+        'click',
+        function () {
+          yellowBox.moveToBottom();
+          layer.draw();
+        },
+        false,
+      );
+
+      document.getElementById('up').addEventListener(
+        'click',
+        function () {
+          yellowBox.moveUp();
+          layer.draw();
+        },
+        false,
+      );
+
+      document.getElementById('down').addEventListener(
+        'click',
+        function () {
+          yellowBox.moveDown();
+          layer.draw();
+        },
+        false,
+      );
+
+      document.getElementById('zIndex').addEventListener(
+        'click',
+        function () {
+          yellowBox.setZIndex(3);
+          layer.draw();
+        },
+        false,
+      );
+
+      // 创建组group
+      var group = new Konva.Group({ width: 500, height: 500, draggable: true });
+      layer.add(group);
+      // 记录移动前的
+      let currentTargetInfo = {};
+      // 将选中拖动的Rect 设置在图层最上层
+      stage.on('mousedown', (event) => {
+        const target = event.target;
+
+        if (Reflect.has(currentTargetInfo, target.name())) {
+          console.log('return');
+          return;
+        }
+        if (target.name()?.startsWith('rect')) {
+          // 判断键盘事件
+          if (event.evt.metaKey || event.evt.ctrlKey) {
+            currentTargetInfo[target.name()] = {
+              target,
+              zIndex: target.zIndex(),
+              strokeWidth: target.strokeWidth(),
+            };
+          } else {
+            handleUnFocus(currentTargetInfo);
+            // currentTargetInfo = {};
+            currentTargetInfo[target.name()] = {
+              target,
+              zIndex: target.zIndex(),
+              strokeWidth: target.strokeWidth(),
+            };
+          }
+          handleFocus(currentTargetInfo);
+          return;
+        } else {
+          // 不是点击的rect ，直接调用获取焦点
+          handleUnFocus(currentTargetInfo);
+        }
+      });
+
+      // handleFocus 获取焦点
+      function handleFocus() {
+        for (let v in currentTargetInfo) {
+          currentTargetInfo[v]?.target?.strokeWidth(4).moveToTop();
+          currentTargetInfo[v]?.target?.moveTo(layer2);
+          // group.add(currentTargetInfo[v]?.target);
+        }
+        layer2.draw();
+      }
+      // 失去焦点
+      function handleUnFocus() {
+        for (let v in currentTargetInfo) {
+          const { target, zIndex, strokeWidth } = currentTargetInfo[v];
+          target.zIndex(zIndex).strokeWidth(strokeWidth);
+        }
+        layer.draw();
+        currentTargetInfo = {};
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../../工具库/tools.js"></script>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      body,html {
+        margin:0;
+        padding:0;
+      }
+      .outer {
+        width: 300px;
+        height: 500px;
+        border: 1px solid;
+        overflow: auto;
+        margin: 0 auto;
+        box-sizing: border-box;
+        margin-top:100px;
+      }
+      .content {
+        height: 1000px;
+      }
+      ul {
+        margin:0;
+        padding:0;
+      }
+      ul > li {
+        box-sizing: border-box;
+        height:100px;
+        display: block;
+        padding: 0;
+        margin:0;
+        border:1px solid;
+      }
+      #lastLi {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="button">click</button>
+    <button id="getInfor">get</button>
+    <div class="container">
+      <div class="outer">      
+        <div class="content">
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li id="lastLi">12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>14</li>
+            <li>14</li>
+            <li>14</li>
+            <li>14</li>
+            <li>14</li>
+          </ui>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const button = document.querySelector('#button');
+    const getInfor = document.querySelector('#getInfor');
+    const dom = document.querySelector('.container').children[0];
+    const lastLi  = document.querySelector('#lastLi');
+    getInfor.onclick = ()=>{
+      console.log(dom.scrollTop,dom.getBoundingClientRect().top,dom.getBoundingClientRect().bottom);
+      const {top,bottom,left,right,width,height} = lastLi.getBoundingClientRect();
+      const v1 = dom.getBoundingClientRect();
+
+      console.log(top,bottom,width,height);
+      console.log('shouldScroll',bottom -  v1.bottom);
+    };
+    button.onclick = ()=>{
+      console.log(111,dom.scrollTop,dom.getBoundingClientRect().top,dom.getBoundingClientRect().bottom);
+      const v1 = dom.getBoundingClientRect();
+      const {top,bottom,left,right,width,height} = lastLi.getBoundingClientRect();
+      // const scrollHeight = v1.top
+      console.log(top,bottom,width,height);
+      const scrollHeight =bottom -  v1.bottom;
+      console.log(2222,v1.top,window.innerHeight);
+      if(v1.bottom > window.innerHeight){
+        dom.scrollTo({top:dom.scrollTop + scrollHeight+(v1.bottom - window.innerHeight),behavior:'smooth'});
+        return;
+      }
+      // const scrollHeight =bottom -  v1.bottom;
+      console.log('滚动',scrollHeight);
+      bottom>window.innerHeight&&dom.scrollTo({top:dom.scrollTop + scrollHeight,behavior:'smooth'});
+    };
+    const deb = debounce((e) => {
+      console.log(e.target.scrollTop,e.target.getBoundingClientRect().top,e.target.getBoundingClientRect().bottom);
+      const v1 = e.target.getBoundingClientRect();
+      const {top,bottom,left,right,width,height} = lastLi.getBoundingClientRect();
+
+      console.log(top,bottom,width,height);
+      const scrollHeight =bottom -  v1.bottom;
+      dom.scrollTo({top:scrollHeight,behavior:'smooth'});
+    },300);
+
+    // dom.onscroll = deb;
+  </script>
+</html>

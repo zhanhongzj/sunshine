@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/konva@4.0.18/konva.min.js"></script>
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="show">显示</button>
+    <button id="hidden">隐藏</button>
+    <div id="container"></div>
+    <script>
+      var width = window.innerWidth;
+      var height = window.innerHeight;
+
+      var stage = new Konva.Stage({
+        container: 'container',
+        width: width,
+        height: height,
+      });
+
+      var layer = new Konva.Layer();
+      stage.add(layer);
+
+      // main API:
+      var imageObj = new Image();
+      imageObj.src = '../../../assets/imgs/zznh.png';
+
+      imageObj.onload = function () {
+        var yoda = new Konva.Image({
+          x: 50,
+          y: 50,
+          image: imageObj,
+          globalCompositeOperation: 'xor',
+
+          // width: 106,
+          // height: 118,
+          id: 'img',
+        });
+
+        // add the shape to the layer
+        layer.add(yoda);
+        yoda.trage;
+        // layer.batchDraw();
+      };
+
+      // alternative API:
+      const img = Konva.Image.fromURL('../../../assets/imgs/pic1.png', function (darthNode) {
+        darthNode.setAttrs({
+          x: 500,
+          y: 50,
+          scaleX: 1,
+          scaleY: 1,
+          draggable: 'ture',
+          globalCompositeOperation: 'xor',
+        });
+        darthNode.on('click', () => {
+          console.log(11212);
+        });
+        layer.add(darthNode);
+        layer.batchDraw();
+      });
+
+      var simpleText = new Konva.Text({
+        x: stage.width() / 2,
+        y: 15,
+        text: 'this is a title',
+        fontSize: 30,
+        fontFamily: 'Calibri',
+        fill: 'black',
+        globalCompositeOperation: 'xor',
+      });
+      layer.add(simpleText);
+      // 箭头
+      var arrow = new Konva.Arrow({
+        x: stage.width() / 4,
+        y: stage.height() / 4,
+        points: [500, 0, width / 2, height / 2],
+        pointerLength: 40,
+        pointerWidth: 40,
+        fill: 'green',
+        stroke: 'green',
+        strokeWidth: 4,
+        draggable: true,
+      });
+      // arrow.draggable = true;
+      layer.add(arrow);
+      layer.draw();
+      arrow.on('mouseenter', () => {
+        // pointer move crosshair default
+        stage.container().style.cursor = 'pointer';
+      });
+      arrow.on('mouseleave', () => {
+        stage.container().style.cursor = 'default';
+      });
+      arrow.on('dragstart', () => {
+        stage.container().style.cursor = 'move';
+      });
+      arrow.on('dragend', () => {
+        stage.container().style.cursor = 'pointer';
+      });
+      arrow.on('dragmove',(e)=>{
+        const pos = stage.getPointerPosition();
+        console.log(e);
+        simpleText.text(`stage:xy${pos.x}-${pos.y}`);
+      });
+      document.addEventListener('dblclick', () => {
+        arrow.show();
+        layer.draw();
+      });
+      // document.addEventListener('click',()=>{
+      //   arrow.hide();
+      //   layer.draw();
+      // });
+    </script>
+  </body>
+</html>

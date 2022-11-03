@@ -3,7 +3,7 @@
         "data": {
             "id": "cntrjdvuow80",
             "created": 1666575018082,
-            "text": "MainTopic"
+            "text": "代码结构"
         },
         "children": [
             {
@@ -481,23 +481,58 @@
                                                     "text": "画板组件"
                                                 },
                                                 "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cnxgfibvwgw0",
+                                                    "created": 1666949921920,
+                                                    "text": "topic"
+                                                },
+                                                "children": []
                                             }
                                         ]
                                     },
                                     {
                                         "data": {
-                                            "id": "cnts4gmloeg0",
-                                            "created": 1666576669701,
-                                            "text": "ProjectTree"
+                                            "id": "cnxge8k3y740",
+                                            "created": 1666949822285,
+                                            "text": "Tree",
+                                            "expandState": "expand"
                                         },
                                         "children": [
                                             {
                                                 "data": {
-                                                    "id": "cnts7dm81fc0",
-                                                    "created": 1666576898240,
-                                                    "text": "项目树"
+                                                    "id": "cnts4gmloeg0",
+                                                    "created": 1666576669701,
+                                                    "text": "ProjectTree"
                                                 },
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cnts7dm81fc0",
+                                                            "created": 1666576898240,
+                                                            "text": "项目树（设计稿，RP）"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cnxgekti3vc0",
+                                                    "created": 1666949848975,
+                                                    "text": "PrototypeTree"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cnxgf1ngmkg0",
+                                                            "created": 1666949885615,
+                                                            "text": "设计稿树"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
@@ -526,7 +561,16 @@
                                     "created": 1666575052278,
                                     "text": "src\\context"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cnxfk4at97c0",
+                                            "created": 1666947462091,
+                                            "text": "context文件"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
@@ -534,7 +578,16 @@
                                     "created": 1666575052278,
                                     "text": "src\\helper"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cnxfk9ffve80",
+                                            "created": 1666947473255,
+                                            "text": "工具函数"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
@@ -542,7 +595,16 @@
                                     "created": 1666575052278,
                                     "text": "src\\hooks"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cnxfkc7l3280",
+                                            "created": 1666947479310,
+                                            "text": "自定义hooks"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
@@ -550,7 +612,16 @@
                                     "created": 1666575052278,
                                     "text": "src\\models"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cnxfl1g70bk0",
+                                            "created": 1666947534250,
+                                            "text": "定义ty类型"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
@@ -565,7 +636,101 @@
                                             "created": 1666575052278,
                                             "text": "页面模块"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxflc1laa00",
+                                                    "created": 1666947557312,
+                                                    "text": "projectTree -项目树模块"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cnxfn1hf5c80",
+                                                            "created": 1666947691053,
+                                                            "text": "action.ts"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cnxg0lgm8o00",
+                                                                    "created": 1666948753274,
+                                                                    "text": "action-creator"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cnxfn2cixxc0",
+                                                            "created": 1666947692934,
+                                                            "text": "reducer.ts"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cnxg0wjfkzs0",
+                                                                    "created": 1666948777389,
+                                                                    "text": "模块内部reducer"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cnxfnmo8ctc0",
+                                                            "created": 1666947737177,
+                                                            "text": "saga.ts"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cnxg10dis8o0",
+                                                                    "created": 1666948785739,
+                                                                    "text": "监听actionType，事件钩子"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cnxfnsepm8w0",
+                                                            "created": 1666947749662,
+                                                            "text": "type.ts"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cnxg0cesow80",
+                                                                    "created": 1666948733573,
+                                                                    "text": "actionType定义"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cnxflct5kgw0",
+                                                    "created": 1666947558979,
+                                                    "text": "moduleType"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cnxfo6fgc0g0",
+                                                    "created": 1666947780182,
+                                                    "text": "storyboard（画板模块）"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "data": {
@@ -573,7 +738,16 @@
                                             "created": 1666575052278,
                                             "text": "actions.ts"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxfzq6y2jk0",
+                                                    "created": 1666948685209,
+                                                    "text": "整理各个模块的Action"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "data": {
@@ -581,7 +755,16 @@
                                             "created": 1666575052278,
                                             "text": "index.ts"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxg1sg2dnc0",
+                                                    "created": 1666948846842,
+                                                    "text": "同一导出：store，reducers，sagas，dispatchers"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "data": {
@@ -589,7 +772,16 @@
                                             "created": 1666575052278,
                                             "text": "reducer.ts"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxfzfggv2o0",
+                                                    "created": 1666948661840,
+                                                    "text": "整理各个模块的reducer进行统一导出"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "data": {
@@ -597,7 +789,16 @@
                                             "created": 1666575052278,
                                             "text": "saga.ts"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxfyp4ta800",
+                                                    "created": 1666948604539,
+                                                    "text": "将各个模块的saga文件集中处理，提供给store作为redux中间件处理监听对应的Action"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "data": {
@@ -605,7 +806,16 @@
                                             "created": 1666575052278,
                                             "text": "store.ts"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxfyb6bluo0",
+                                                    "created": 1666948574155,
+                                                    "text": "生成store，应用saga中间件"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "data": {
@@ -613,7 +823,16 @@
                                             "created": 1666575052278,
                                             "text": "tyles.ts"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxg0187dsw0",
+                                                    "created": 1666948709230,
+                                                    "text": "整理各个模块的ActionType"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -623,7 +842,16 @@
                                     "created": 1666575052278,
                                     "text": "src\\workers"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cnxg8zuik7k0",
+                                            "created": 1666949411503,
+                                            "text": "web-workers"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
@@ -631,7 +859,16 @@
                                     "created": 1666575052279,
                                     "text": "src\\zip"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cnxg9548fls0",
+                                            "created": 1666949422974,
+                                            "text": "压缩工具"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
@@ -639,7 +876,16 @@
                                     "created": 1666575052279,
                                     "text": "index.html"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cnxg9l4mub40",
+                                            "created": 1666949457827,
+                                            "text": "webpack - html模版"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
@@ -647,7 +893,16 @@
                                     "created": 1666575052279,
                                     "text": "index.scss"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cnxg9ukdy7c0",
+                                            "created": 1666949478370,
+                                            "text": "全局css样式"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
@@ -655,7 +910,16 @@
                                     "created": 1666575052279,
                                     "text": "index.tsx"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cnxg9che08w0",
+                                            "created": 1666949439007,
+                                            "text": "打包入口文件"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
@@ -670,7 +934,16 @@
                                             "created": 1666575052279,
                                             "text": "dsm"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxgcsbd7a80",
+                                                    "created": 1666949708564,
+                                                    "text": "老版本UI库"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "data": {
@@ -678,7 +951,16 @@
                                             "created": 1666575052279,
                                             "text": "fbs"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxgcwko04g0",
+                                                    "created": 1666949717833,
+                                                    "text": "后端api 定义类型"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "data": {
@@ -686,7 +968,16 @@
                                             "created": 1666575052279,
                                             "text": "i18n"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxga407dwg0",
+                                                    "created": 1666949498918,
+                                                    "text": "国际化"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "data": {
@@ -699,7 +990,7 @@
                                                 "data": {
                                                     "id": "cntrjtlepo00",
                                                     "created": 1666575052279,
-                                                    "text": "UI组件库"
+                                                    "text": "UI2.0 组件库"
                                                 },
                                                 "children": []
                                             }
@@ -710,6 +1001,83 @@
                                             "id": "cntrjtle7y80",
                                             "created": 1666575052279,
                                             "text": "wemeet"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxgcmmnr340",
+                                                    "created": 1666949696186,
+                                                    "text": "腾讯会议包"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cnxgac9bhjc0",
+                                    "created": 1666949516883,
+                                    "text": "locales"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cnxgaitbmcw0",
+                                            "created": 1666949531153,
+                                            "text": "en-us"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxgc1dv7h40",
+                                                    "created": 1666949649942,
+                                                    "text": "国际化-英文文案"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cnxgajrardk0",
+                                            "created": 1666949533208,
+                                            "text": "zh-cn"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxgcbzhg940",
+                                                    "created": 1666949673017,
+                                                    "text": "国际化-中文简体文档"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cnxgakk6ctc0",
+                                            "created": 1666949534954,
+                                            "text": "zh-tw"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cnxgcfxzzs80",
+                                                    "created": 1666949681634,
+                                                    "text": "国际化-中文繁体文档"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cnxgaldaz680",
+                                            "created": 1666949536715,
+                                            "text": "index.ts"
                                         },
                                         "children": []
                                     }
@@ -782,7 +1150,16 @@
                             "created": 1666575052280,
                             "text": ".gitmodules"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cnxgdru4gf40",
+                                    "created": 1666949785885,
+                                    "text": "git子模块配置"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {
@@ -831,7 +1208,16 @@
                             "created": 1666575052280,
                             "text": "package-lock.json、yarn.lock"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cnxgdj9yr3s0",
+                                    "created": 1666949767252,
+                                    "text": "版本锁"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {
@@ -847,7 +1233,16 @@
                             "created": 1666575052280,
                             "text": "postcss.config.js"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cnxgddfxpxk0",
+                                    "created": 1666949754553,
+                                    "text": "css兼容性配置"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {

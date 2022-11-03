@@ -18,15 +18,21 @@ function List(props:any) {
   // },[])
 
   // @ts-ignore
-  // const list = useSelector((state) => state?.list);
-  // const dispatch = useDispatch();
+  const count = useSelector((state) => {return state?.list.count});
+  const list = useSelector((state:any) => {return state?.list});
+  // const test = useSelector((state:any) => {return state?.users.test});
+  const items = useSelector((state:any) => state?.list?.items);
+  const dispatch = useDispatch();
   const handleClear = () => {
-    // dispatch({ type: 'list-CLEAR' });
-    props.onClear();
+    dispatch({ type: 'list-CLEAR_ITEMS' });
+    // props.onClear();
   };
+  console.log('组件更新');
   return (
     <>
-      {props.items.map((v: React.Key | null | undefined, index: any) => (
+    <div>111{count}</div>
+    {/* <div>{test}</div> */}
+      {items?.map((v: React.Key | null | undefined, index: any) => (
         <ListItem key={v} value={{ id: index, value: v }} />
       ))}
       <div style={{ marginTop: 20, display: 'flex', justifyContent: 'flex-end' }}>
@@ -37,13 +43,14 @@ function List(props:any) {
     </>
   );
 }
-const mapStateToProps = (state: any) => ({
-  items: state.list.items,
-});
-const mapDispatchToProps = (dispatch:any) => ({
-  onClear: () => {
-    // dispatch({ type: 'list-CLEAR' });
-    dispatch(Actions.clearItems());
-  },
-});
-export default connect(mapStateToProps,mapDispatchToProps)(List);
+// const mapStateToProps = (state: any) => ({
+//   items: state.list.items,
+// });
+// const mapDispatchToProps = (dispatch:any) => ({
+//   onClear: () => {
+//     // dispatch({ type: 'list-CLEAR' });
+//     dispatch(Actions.clearItems());
+//   },
+// });
+// export default connect(mapStateToProps,mapDispatchToProps)(List);
+export default List;

@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import TodoList from './pages/todo-list';
 import List from './pages/list';
 import Users from './pages/users';
+import CanvasLayout from './pages/konva';
 
 import { store } from './redux/store';
 
@@ -24,6 +25,7 @@ function App() {
             <Route path='/todo-list' element={<TodoList />} />
             <Route path='/list' element={<List />} />
             <Route path='/users' element={<Users />} />
+            <Route path='/canvas' element={<CanvasLayout />} />
             <Route path='*' element={<>404</>} />
           </Routes>
         </BrowserRouter>

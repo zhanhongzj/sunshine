@@ -355,49 +355,308 @@
                                         "children": [
                                             {
                                                 "data": {
-                                                    "id": "cnvglh0uh7k0",
-                                                    "created": 1666747269347,
-                                                    "text": "数据层",
-                                                    "layout_right_offset": {
-                                                        "x": 0,
-                                                        "y": 127
-                                                    }
+                                                    "id": "cnxde3jjv8o0",
+                                                    "created": 1666941348038,
+                                                    "text": " PrototypeTree（原型稿专用树结构）"
                                                 },
                                                 "children": []
                                             },
                                             {
                                                 "data": {
-                                                    "id": "cnvgm3nh1go0",
-                                                    "created": 1666747318605,
-                                                    "text": "组件层",
-                                                    "expandState": "expand",
-                                                    "layout_right_offset": {
-                                                        "x": -3,
-                                                        "y": -64
-                                                    }
+                                                    "id": "cnxdefvtii00",
+                                                    "created": 1666941374901,
+                                                    "text": "ProjectTree（设计稿，RP）",
+                                                    "expandState": "expand"
                                                 },
                                                 "children": [
                                                     {
                                                         "data": {
-                                                            "id": "cnuma3c7e1k0",
-                                                            "created": 1666661744256,
-                                                            "text": "TreeTools（组件树头部工具栏）"
+                                                            "id": "cnvgm3nh1go0",
+                                                            "created": 1666747318605,
+                                                            "text": "组件层",
+                                                            "expandState": "expand"
                                                         },
-                                                        "children": []
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cnuma3c7e1k0",
+                                                                    "created": 1666661744256,
+                                                                    "text": "TreeTools（组件树头部工具栏）"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cnxdfreya540",
+                                                                            "created": 1666941478367,
+                                                                            "text": "功能"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "cnxdfugcu1k0",
+                                                                                    "created": 1666941484982,
+                                                                                    "text": "新建页面"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "cnxdh4743aw0",
+                                                                                    "created": 1666941584555,
+                                                                                    "text": "新建分组"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "cnxdhdioo480",
+                                                                                    "created": 1666941604846,
+                                                                                    "text": "搜索"
+                                                                                },
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "cnxdhifxjx40",
+                                                                                    "created": 1666941615563,
+                                                                                    "text": "标记进度"
+                                                                                },
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "cnumanwipao0",
+                                                                    "created": 1666661789020,
+                                                                    "text": "TreeContent（树主体）"
+                                                                },
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cnxdjm1u30w0",
+                                                                            "created": 1666941780146,
+                                                                            "text": "功能"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "cnxdjpizdjs0",
+                                                                                    "created": 1666941787713,
+                                                                                    "text": "右键弹窗"
+                                                                                },
+                                                                                "children": [
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdk02drbs0",
+                                                                                            "created": 1666941810654,
+                                                                                            "text": "新建"
+                                                                                        },
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "cnxdq0eyi7s0",
+                                                                                                    "created": 1666942281600,
+                                                                                                    "text": "页面"
+                                                                                                },
+                                                                                                "children": []
+                                                                                            },
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "cnxdq16djio0",
+                                                                                                    "created": 1666942283258,
+                                                                                                    "text": "分组"
+                                                                                                },
+                                                                                                "children": []
+                                                                                            },
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "cnxdq1xntc00",
+                                                                                                    "created": 1666942284907,
+                                                                                                    "text": "任务"
+                                                                                                },
+                                                                                                "children": []
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdk46eo9k0",
+                                                                                            "created": 1666941819605,
+                                                                                            "text": "合并为分组"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdk7d2d5k0",
+                                                                                            "created": 1666941826538,
+                                                                                            "text": "解散分组"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdkb8ycn40",
+                                                                                            "created": 1666941834996,
+                                                                                            "text": "重命名"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdke81j5s0",
+                                                                                            "created": 1666941841472,
+                                                                                            "text": "下载页面"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdkhpbjmg0",
+                                                                                            "created": 1666941849047,
+                                                                                            "text": "下载切图"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdkl04e080",
+                                                                                            "created": 1666941856230,
+                                                                                            "text": "删除"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdkofgk740",
+                                                                                            "created": 1666941863688,
+                                                                                            "text": "编辑",
+                                                                                            "expandState": "expand"
+                                                                                        },
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "cnxdnyo63hc0",
+                                                                                                    "created": 1666942121075,
+                                                                                                    "text": "克隆cmd +D"
+                                                                                                },
+                                                                                                "children": []
+                                                                                            },
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "cnxdod60ia80",
+                                                                                                    "created": 1666942152629,
+                                                                                                    "text": "复制cmd+c"
+                                                                                                },
+                                                                                                "children": []
+                                                                                            },
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "cnxdofntt600",
+                                                                                                    "created": 1666942158059,
+                                                                                                    "text": "剪贴cmd+x"
+                                                                                                },
+                                                                                                "children": []
+                                                                                            },
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "cnxdosb0i000",
+                                                                                                    "created": 1666942185583,
+                                                                                                    "text": "粘贴cmd+v"
+                                                                                                },
+                                                                                                "children": []
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdkuaw2s80",
+                                                                                            "created": 1666941876472,
+                                                                                            "text": "按名词整理"
+                                                                                        },
+                                                                                        "children": [
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "cnxdnkcw50g0",
+                                                                                                    "created": 1666942089918,
+                                                                                                    "text": "整理全部"
+                                                                                                },
+                                                                                                "children": []
+                                                                                            },
+                                                                                            {
+                                                                                                "data": {
+                                                                                                    "id": "cnxdnl2n42o0",
+                                                                                                    "created": 1666942091475,
+                                                                                                    "text": "整理选中"
+                                                                                                },
+                                                                                                "children": []
+                                                                                            }
+                                                                                        ]
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdky9ux4g0",
+                                                                                            "created": 1666941885117,
+                                                                                            "text": "移动到"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdl1cmq2w0",
+                                                                                            "created": 1666941891815,
+                                                                                            "text": "复制到"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdl5y9jh40",
+                                                                                            "created": 1666941901830,
+                                                                                            "text": "标记为首页"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdl97e21c0",
+                                                                                            "created": 1666941908912,
+                                                                                            "text": "设置为横屏"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    },
+                                                                                    {
+                                                                                        "data": {
+                                                                                            "id": "cnxdlg1fbo80",
+                                                                                            "created": 1666941923789,
+                                                                                            "text": "页面对比"
+                                                                                        },
+                                                                                        "children": []
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "cnumaztr68w0",
+                                                                    "created": 1666661814974,
+                                                                    "text": "Trash（回收站）"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
                                                     },
                                                     {
                                                         "data": {
-                                                            "id": "cnumanwipao0",
-                                                            "created": 1666661789020,
-                                                            "text": "TreeContent（树主体）"
-                                                        },
-                                                        "children": []
-                                                    },
-                                                    {
-                                                        "data": {
-                                                            "id": "cnumaztr68w0",
-                                                            "created": 1666661814974,
-                                                            "text": "Trash（回收站）"
+                                                            "id": "cnvglh0uh7k0",
+                                                            "created": 1666747269347,
+                                                            "text": "数据层"
                                                         },
                                                         "children": []
                                                     }
